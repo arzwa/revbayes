@@ -151,6 +151,7 @@
 
 /* Moves on discrete character data matrices */
 #include "Move_HomeologPhase.h"
+#include "Move_HomeologPairPhase.h"
 
 ///* Moves on covariance matrices */
 #include "Move_MatrixRealSymmetricSlide.h"
@@ -331,6 +332,7 @@ void RevLanguage::Workspace::initializeMoveGlobalWorkspace(void)
 
         /* Moves on discrete character data matrices */
         addType( new Move_HomeologPhase() );
+        addType( new Move_HomeologPairPhase() );
 
         /* Moves on mixtures (in folder "datatypes/inference/moves/mixture") */
         addType( new Move_DPPTableValueUpdate<RealPos>( new RevBayesCore::ScaleProposal( NULL, 1.0 ) ) );
